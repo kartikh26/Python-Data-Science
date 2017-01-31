@@ -3,7 +3,7 @@ class Perceptron(object):
 
 	def __init__(self, learning_rate=0.01, num_iterations=10):
 		self.learning_rate = learning_rate
-		self.num_iterations = num_iterations
+		self.num_iterations = num_iterations #Number of passes over a training set (epoch)
 
 	def fit(self, X, y):
 		"""
@@ -30,4 +30,4 @@ class Perceptron(object):
 		return self.weights[0] + np.dot(X, self.weights[1:])
 
 	def predict(self):
-		return np.where(np.net_input(X) >= 0.0, 1, -1) 
+		return np.where(np.net_input(X) >= 0.0, 1, -1)
